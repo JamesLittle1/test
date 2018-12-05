@@ -1,5 +1,5 @@
 def pa11y_dashboard(session, id)
-session.visit("http://localhost:4000/#{id}/run")
+session.visit("http://10.1.0.43:4000/#{id}/run")
 
 errors = session.find(:id, 'errors')['innerHTML'].scan(/\d+/).first.to_i
 warnings = session.find(:id, 'warnings')['innerHTML'].scan(/\d+/).first.to_i
